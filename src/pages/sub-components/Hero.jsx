@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ReactTyped } from "react-typed";
 import { ModeToggle } from "@/components/ui/mode-toggle";
+import { serverUrl } from "@/ServerUrl.js";
 
 const Hero = () => {
   const [user, setUser] = useState({});
@@ -18,7 +19,7 @@ const Hero = () => {
   useEffect(() => {
     const getMyProfile = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/user/me/portfolio",
+        `${serverUrl}/api/v1/user/me/portfolio`,
         {
           withCredentials: true,
         }

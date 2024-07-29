@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { serverUrl } from "@/ServerUrl.js";
 
 const Timeline = () => {
   const [timeline, setTimeline] = useState([]);
 
   useEffect(() => {
     const getMyTimeline = async () => {
-      const { data } = await axios.get(
-        "http://localhost:4000/api/v1/timeline/getall",
-        {
-          withCredentials: true,
-        }
-      );
+      const { data } = await axios.get(`${serverUrl}/api/v1/timeline/getall`, {
+        withCredentials: true,
+      });
       setTimeline(data.timelines);
     };
     getMyTimeline();

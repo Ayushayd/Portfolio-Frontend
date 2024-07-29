@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { serverUrl } from "@/ServerUrl.js";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -8,7 +9,7 @@ const MyApps = () => {
   useEffect(() => {
     const getMyApps = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/softwareapplication/getall",
+        `${serverUrl}/api/v1/softwareapplication/getall`,
         {
           withCredentials: true,
         }

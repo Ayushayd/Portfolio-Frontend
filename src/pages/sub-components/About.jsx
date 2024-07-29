@@ -1,3 +1,4 @@
+import { serverUrl } from "@/ServerUrl.js";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -6,7 +7,7 @@ const About = () => {
   useEffect(() => {
     const getMyProfile = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/user/me/portfolio",
+        `${serverUrl}/api/v1/user/me/portfolio`,
         {
           withCredentials: true,
         }
