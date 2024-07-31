@@ -35,7 +35,7 @@ const About = () => {
             <img
               src={user.avatar && user.avatar.url}
               alt={user.fullName}
-              className="bg-white p-2 sm:p-4 rotate-[25deg] h-[240px] sm:h-[340px] md:h-[350px] lg:h-[450px]"
+              className="bg-white p-2 sm:p-4 rotate-[0deg] h-[240px] sm:h-[340px] md:h-[350px] lg:h-[450px]"
             />
           </div>
           <div className="flex justify-center flex-col tracking-[1px] text-xl gap-5">
